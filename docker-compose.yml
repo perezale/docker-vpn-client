@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  pptp:
+    env_file: .env
+    build: .    
+    network_mode: host    
+    devices:
+      - /dev/ppp:/dev/ppp
+    privileged: true    
+    command: pptp 168.226.214.184 pladema
+    cap_add:
+      - NET_ADMIN
