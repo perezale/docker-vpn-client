@@ -7,6 +7,6 @@ services:
     devices:
       - /dev/ppp:/dev/ppp
     privileged: true    
-    command: pptp 168.226.214.184 pladema
+    command: pptp ${VPN_HOST} ${VPN_USER}
     cap_add:
       - NET_ADMIN
