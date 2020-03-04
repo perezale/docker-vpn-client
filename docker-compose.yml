@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3"
 services:
   pptp:
     env_file: .env
@@ -10,3 +10,4 @@ services:
     command: pptp ${VPN_HOST} ${VPN_USER}
     cap_add:
       - NET_ADMIN
+    restart: unless-stopped
